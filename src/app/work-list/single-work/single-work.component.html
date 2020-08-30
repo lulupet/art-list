@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-xs-12">
+        <img style="max-width: 400px;" *ngIf="work.picture" [src]="work.picture">
+        <h1>{{ work.title }}</h1>
+        <h3>{{ work.author }}</h3>
+        <h5>{{ work.year }}</h5>
+        <button class="btn btn-default pull-right"
+                (click)="onEditWork(id)">
+            <span class="glyphicon glyphicon-pencil"></span>
+        </button>
+        <button class="btn btn-default" (click)="onBack()">Back</button>
+    </div>
+</div>

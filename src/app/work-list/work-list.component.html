@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-xs-12">
+        <h2>My favorite works of art</h2>
+        <div class="list-group">
+            <button class="list-group-item"
+                    *ngFor="let work of works; let i = index"
+                    (click)="onViewWork(i)">
+                <img [src]="work.picture">
+                <button class="btn btn-default pull-right"
+                        (click)="onDeleteWork(work)">
+                    <span class="glyphicon glyphicon-minus"></span>
+                </button>
+            </button>
+        </div>
+        <button class="btn btn-primary"
+                (click)="onNewWork()">New work of art</button>
+    </div>
+</div>
